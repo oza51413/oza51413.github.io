@@ -60,25 +60,25 @@ body {
 }
 
 #top-left .mini-branch {
-  top: 0;
-  left: 50%;
+  top: 20%;
+  left: 40%;
   transform: translate(-50%, -100%);
 }
 
 #bottom-left .mini-branch {
-  bottom: 0;
-  left: 50%;
+  bottom: 20%;
+  left: 40%;
   transform: translate(-50%, 100%);
 }
 
 #top-right .mini-branch {
-  top: 0;
-  right: 50%;
+  top: 20%;
+  right: 40%;
   transform: translate(50%, -100%);
 }
 
 #bottom-right .mini-branch {
-  bottom: 0;
-  right: 50%;
+  bottom: 20;
+  right: 40%;
   transform: translate(50%, 100%);
 }
