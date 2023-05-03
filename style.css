@@ -15,57 +15,6 @@ body {
   cursor: pointer;
 }
 
-.glitch-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.glitch-text {
-  font-size: 200px;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 0 2px #00ff00;
-  animation: glitch 1s linear infinite;
-}
-
-@keyframes glitch {
-  0% {
-    transform: none;
-    opacity: 1;
-  }
-  5% {
-    transform: skew(0.5deg, 0.5deg);
-    opacity: 0.75;
-  }
-  10% {
-    transform: none;
-    opacity: 1;
-  }
-  /* repeat the above glitching sequence every 20% */
-  15%, 35%, 55%, 75%, 95% {
-    transform: none;
-    opacity: 1;
-  }
-  20%, 40%, 60%, 80% {
-    transform: skew(-0.9deg, -0.9deg);
-    opacity: 0.75;
-  }
-  25%, 45%, 65%, 85% {
-    transform: none;
-    opacity: 1;
-  }
-  100% {
-    transform: none;
-    opacity: 1;
-  }
-}
-
-
 .branch {
   position: absolute;
   height: 100%;
