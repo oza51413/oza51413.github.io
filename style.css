@@ -53,12 +53,6 @@ body {
   cursor: pointer;
 }
 
-#top-left:hover .mini-branch,
-#bottom-left:hover .mini-branch,
-#top-right:hover .mini-branch,
-#bottom-right:hover .mini-branch {
-  display: block;
-}
 
 #top-left .mini-branch {
   top: 25%;
