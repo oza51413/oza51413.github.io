@@ -4,6 +4,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
 #center {
   position: absolute;
   top: 50%;
@@ -12,62 +13,55 @@ body {
   font-size: 48px;
   font-weight: bold;
   cursor: pointer;
-  text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 120px #0ff, 0 0 200px #0ff, 0 0 300px #0ff, 0 0 400px #0ff;
-  animation: glitch 1s infinite linear alternate-reverse;
+}
+
+.glitch-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.glitch-text {
+  font-size: 200px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 2px #00ff00;
+  animation: glitch 1s linear infinite;
 }
 
 @keyframes glitch {
   0% {
-    clip: rect(60px, 9999px, 50px, 0);
-    transform: skew(0.5deg);
-    opacity: 0.7;
+    transform: none;
+    opacity: 1;
+  }
+  5% {
+    transform: skew(0.5deg, 0.5deg);
+    opacity: 0.75;
   }
   10% {
-    clip: rect(20px, 9999px, 80px, 0);
-    transform: skew(-0.8deg);
+    transform: none;
+    opacity: 1;
   }
-  20% {
-    clip: rect(70px, 9999px, 80px, 0);
-    transform: skew(0.2deg);
+  /* repeat the above glitching sequence every 20% */
+  15%, 35%, 55%, 75%, 95% {
+    transform: none;
+    opacity: 1;
   }
-  30% {
-    clip: rect(30px, 9999px, 20px, 0);
-    transform: skew(-0.3deg);
-    opacity: 0.4;
+  20%, 40%, 60%, 80% {
+    transform: skew(-0.9deg, -0.9deg);
+    opacity: 0.75;
   }
-  40% {
-    clip: rect(90px, 9999px, 40px, 0);
-    transform: skew(0.5deg);
-    opacity: 0.6;
-  }
-  50% {
-    clip: rect(10px, 9999px, 20px, 0);
-    transform: skew(-0.4deg);
-    opacity: 0.8;
-  }
-  60% {
-    clip: rect(70px, 9999px, 50px, 0);
-    transform: skew(0.3deg);
-    opacity: 0.5;
-  }
-  70% {
-    clip: rect(10px, 9999px, 90px, 0);
-    transform: skew(-0.2deg);
-  }
-  80% {
-    clip: rect(50px, 9999px, 60px, 0);
-    transform: skew(0.6deg);
-    opacity: 0.7;
-  }
-  90% {
-    clip: rect(10px, 9999px, 40px, 0);
-    transform: skew(-0.5deg);
-    opacity: 0.9;
+  25%, 45%, 65%, 85% {
+    transform: none;
+    opacity: 1;
   }
   100% {
-    clip: rect(90px, 9999px, 90px, 0);
-    transform: skew(0.4deg);
-    opacity: 0.4;
+    transform: none;
+    opacity: 1;
   }
 }
 
