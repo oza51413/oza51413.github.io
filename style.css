@@ -12,7 +12,65 @@ body {
   font-size: 48px;
   font-weight: bold;
   cursor: pointer;
+  text-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff, 0 0 120px #0ff, 0 0 200px #0ff, 0 0 300px #0ff, 0 0 400px #0ff;
+  animation: glitch 1s infinite linear alternate-reverse;
 }
+
+@keyframes glitch {
+  0% {
+    clip: rect(60px, 9999px, 50px, 0);
+    transform: skew(0.5deg);
+    opacity: 0.7;
+  }
+  10% {
+    clip: rect(20px, 9999px, 80px, 0);
+    transform: skew(-0.8deg);
+  }
+  20% {
+    clip: rect(70px, 9999px, 80px, 0);
+    transform: skew(0.2deg);
+  }
+  30% {
+    clip: rect(30px, 9999px, 20px, 0);
+    transform: skew(-0.3deg);
+    opacity: 0.4;
+  }
+  40% {
+    clip: rect(90px, 9999px, 40px, 0);
+    transform: skew(0.5deg);
+    opacity: 0.6;
+  }
+  50% {
+    clip: rect(10px, 9999px, 20px, 0);
+    transform: skew(-0.4deg);
+    opacity: 0.8;
+  }
+  60% {
+    clip: rect(70px, 9999px, 50px, 0);
+    transform: skew(0.3deg);
+    opacity: 0.5;
+  }
+  70% {
+    clip: rect(10px, 9999px, 90px, 0);
+    transform: skew(-0.2deg);
+  }
+  80% {
+    clip: rect(50px, 9999px, 60px, 0);
+    transform: skew(0.6deg);
+    opacity: 0.7;
+  }
+  90% {
+    clip: rect(10px, 9999px, 40px, 0);
+    transform: skew(-0.5deg);
+    opacity: 0.9;
+  }
+  100% {
+    clip: rect(90px, 9999px, 90px, 0);
+    transform: skew(0.4deg);
+    opacity: 0.4;
+  }
+}
+
 
 .branch {
   position: absolute;
