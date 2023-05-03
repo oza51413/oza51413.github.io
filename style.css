@@ -23,6 +23,7 @@ body {
 
 #top-left {
   left: 0;
+  top: 0;
 }
 
 #bottom-left {
@@ -32,6 +33,7 @@ body {
 
 #top-right {
   right: 0;
+  top: 0;
 }
 
 #bottom-right {
