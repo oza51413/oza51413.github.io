@@ -1,64 +1,84 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #222;
-    color: #fff;
-    padding: 1em;
+#center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.branch {
+  position: absolute;
+  height: 100%;
+  width: 50%;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#top-left {
+  left: 0;
 }
 
-nav li {
-    margin: 0 1em;
+#bottom-left {
+  bottom: 0;
+  left: 0;
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
+#top-right {
+  right: 0;
 }
 
-h1, h2, h3 {
-    margin: 0;
+#bottom-right {
+  bottom: 0;
+  right: 0;
 }
 
-section {
-    margin: 2em auto;
-    max-width: 800px;
+.mini-branch {
+  display: none;
+  position: absolute;
+  height: 20px;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
 }
 
-article {
-    background-color: #fff;
-    padding: 1em;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+#top-left:hover .mini-branch,
+#bottom-left:hover .mini-branch,
+#top-right:hover .mini-branch,
+#bottom-right:hover .mini-branch {
+  display: block;
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
+#top-left .mini-branch {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
 }
 
-a:hover {
-    color: #222;
-    background-color: #fff;
-    transition: all 0.2s ease-in-out;
+#bottom-left .mini-branch {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+
+#top-right .mini-branch {
+  top: 0;
+  right: 50%;
+  transform: translate(50%, -100%);
+}
+
+#bottom-right .mini-branch {
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 100%);
 }
